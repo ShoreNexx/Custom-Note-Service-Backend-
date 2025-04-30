@@ -149,6 +149,11 @@ create table notes (
 );
 
 ```
+### Why?
+- **UUID** is used as the primary key to avoid collisions and ensure global uniqueness.
+- **TEXT** type allows for flexible and variable-length content in both title and content.
+- **TIMESTAMP** with `now()` records the creation time of each note without needing explicit input.
+
 #### Step 3: Deploy the Functions
 1. After writing the functions, click on **Deploy** in the Supabase dashboard to deploy them to your project.
 2. Supabase will provide you with **URLs** for each deployed function (e.g., `/functions/v1/post_notes` and `/functions/v1/get_notes`).
